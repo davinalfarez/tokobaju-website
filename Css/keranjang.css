@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #444;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.search-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-profile input {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 180px;
+}
+
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Keranjang container */
+.keranjang-container {
+  padding: 20px;
+}
+
+.keranjang-container h1 {
+  margin-bottom: 20px;
+}
+
+.produk {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fafafa;
+}
+
+.produk img {
+  width: 120px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.size-options {
+  margin-bottom: 10px;
+}
+
+.size-options span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.size-btn {
+  margin: 3px;
+  padding: 5px 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.size-btn.active {
+  background-color: #444;
+  color: white;
+}
+
+.harga {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.kuantitas {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.kuantitas button {
+  padding: 5px 10px;
+  border: 1px solid #333;
+  background: #fff;
+  cursor: pointer;
+}
+
+.kuantitas button:hover {
+    color: white;
+    background-color: #555;
+}
+
+.kuantitas .jumlah {
+  margin: 0 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.bayar {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .produk {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .produk img {
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    margin-top: 10px;
+  }
+
+  .search-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+}

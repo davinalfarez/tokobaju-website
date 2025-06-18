@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pembayaran - Zan Store</title>
+  <link rel="stylesheet" href="Css/pembayaran.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">Zan Store</div>
+    <nav>
+      <a href="keranjang.html">Keranjang</a>
+      <a href="homepage.html">Beranda</a>
+    </nav>
+    <div class="search-profile">
+      <input type="text" placeholder="Cari..." />
+      <img src="Assets/ali.jpg" alt="Profile" class="profile-icon" />
+    </div>
+  </header>
+
+  <main>
+    <button class="judul-bayar" disabled>Bayar</button>
+
+    <div class="produk-container">
+      <img src="Assets/baju.png" alt="Baju" class="produk-img" />
+      <div class="produk-info">
+        <h3>Baju Dengan Bahan Premium</h3>
+        <p>Baju dengan desain iconic, dan dengan bahan super lembut</p>
+      </div>
+      <div class="produk-detail">
+        <div class="size-group">
+          <span>Size</span>
+          <div class="sizes">
+            <button>XL</button>
+            <button>L</button>
+            <button>M</button>
+            <button>XS</button>
+            <button>S</button>
+            <button>XXL</button>
+          </div>
+        </div>
+        <div class="harga">Harga<br><strong>Rp100.000</strong></div>
+        <div class="kuantitas">
+          Kuantitas
+          <div class="qty-control">
+            <button onclick="ubahQty(-1)">-</button>
+            <span id="jumlah">1</span>
+            <button onclick="ubahQty(1)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pembayaran-box">
+      <div class="metode-title">Metode Pembayaran</div>
+      <div class="opsi-pembayaran">
+        <label><input type="radio" name="metode" value="BCA" /> BCA</label>
+        <label><input type="radio" name="metode" value="Gopay" /> Gopay</label>
+        <label><input type="radio" name="metode" value="Dana" /> Dana</label>
+        <label><input type="radio" name="metode" value="OVO" /> OVO</label>
+      </div>
+      <button class="btn-bayar" id="tombolBayar" disabled onclick="bayar()">Bayar</button>
+    </div>
+  </main>
+
+  <script>
+    let jumlah = 1;
+    function ubahQty(val) {
+      jumlah += val;
+      if (jumlah < 1) jumlah = 1;
+      document.getElementById("jumlah").innerText = jumlah;
+    }
+
+    const metodeRadios = document.querySelectorAll('input[name="metode"]');
+    const tombolBayar = document.getElementById("tombolBayar");
+
+    metodeRadios.forEach((radio) => {
+      radio.addEventListener("change", () => {
+        tombolBayar.disabled = false;
+      });
+    });
+
+    function bayar() {
+      alert("Pembayaran berhasil");
+    }
+
+    document.querySelectorAll('.size-options').forEach(group => {
+  const buttons = group.querySelectorAll('.size-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+});
+  </script>
+</body>
+</html>

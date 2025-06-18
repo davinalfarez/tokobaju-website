@@ -1,0 +1,131 @@
+/* Font dan Latar */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.auth-page {
+  position: relative;
+  height: 100vh;
+  background: url(../Assets/LandingPage.png) center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form Container */
+.form-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+/* Input dan Tombol */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Sosial Media */
+.or {
+  margin: 20px 0 10px;
+}
+
+.social-buttons button {
+  width: 48%;
+  padding: 10px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+button.google {
+  background-color: #db4437;
+  color: white;
+}
+
+button.google:hover {
+  background-color: #c23321;
+}
+
+button.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+button.facebook:hover {
+  background-color: #2d4373;
+}
+
+/* Link Bawah */
+form p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+form p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .social-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

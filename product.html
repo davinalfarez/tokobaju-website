@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baju Seven Zero Five - Zan Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Css/product.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+  <div class="logo">Zan Store</div>
+  <nav>
+    <a href="homepage.html">Beranda</a>        
+    <a href="keranjang.html">Keranjang</a>
+  </nav>
+  
+  <!-- FORM untuk pencarian -->
+  <form class="search-profile" action="pencarian.html" method="GET">
+    <input type="text" name="query" placeholder="Cari..." />
+    <button type="submit" style="display: none;"></button>
+    <img src="Assets/ali.jpg" alt="Profile" class="profile-icon">
+  </form>
+</header>
+
+
+  <main class="product-detail">
+    <div class="product-image">
+      <img src="Assets/baju.png" alt="Baju seven zero five" />
+    </div>
+    <div class="product-info">
+      <h2>Baju seven zero five</h2>
+      <div class="rating">
+        <span>4,5</span>
+        <span class="stars">★★★★★</span>
+        <span class="count">(300 Penilaian)</span>
+      </div>
+      <div class="price">
+        <span class="current">Rp100.000</span>
+        <span class="old">Rp150.000</span>
+      </div>
+
+      <div class="sizes">
+        <p>Size</p>
+        <div class="size-options">
+          <button>XL</button>
+          <button>L</button>
+          <button>M</button>
+          <button>XS</button>
+          <button>S</button>
+          <button>XXL</button>
+        </div>
+      </div>
+
+      <div class="quantity-buy">
+        <div class="quantity">
+          <label>Jumlah</label>
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="buy-btn" onclick="window.location.href='pembayaran.html'">BELI SEKARANG</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="description">
+    <h3>Deskripsi Produk</h3>
+    <p>
+      100% Original<br />
+      100% Trusted since 2020<br />
+      Brand New with Tag<br /><br />
+      Ukuran: Lengkap<br />
+      (silahkan tulis dicatatan ukuran yang di pesan)<br /><br />
+      Bergaransi Tukar Ukuran, selama sesuai dengan ketentuan penukaran produk.<br />
+      Team ahli kami memastikan keaslian semua produk yang dijual dan melalui pengecekan kondisi fisik secara detail.<br />
+      <br />
+      Happy Shopping!
+    </p>
+  </section>
+</body>
+</html>

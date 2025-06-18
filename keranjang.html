@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keranjang - Zan Store</title>
+  <link rel="stylesheet" href="Css/keranjang.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="logo">Zan Store</div>
+  <nav>
+    <a href="homepage.html">Beranda</a>        
+    <a href="keranjang.html">Keranjang</a>
+  </nav>
+  
+  <!-- FORM untuk pencarian -->
+  <form class="search-profile" action="pencarian.html" method="GET">
+    <input type="text" name="query" placeholder="Cari..." />
+    <button type="submit" style="display: none;"></button>
+    <img src="Assets/ali.jpg" alt="Profile" class="profile-icon">
+  </form>
+</header>
+
+
+  <main class="keranjang-container">
+    <h1>Keranjang</h1>
+
+    <div class="produk">
+      <img src="Assets/baju.png" alt="Baju" />
+      <div class="info">
+        <h2>Baju Dengan Bahan Premium</h2>
+        <div class="size-options">
+          <span>Size:</span>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">M</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn">XS</button>
+          <button class="size-btn">XXL</button>
+        </div>
+        <p class="harga">Harga: Rp100.000</p>
+        <div class="kuantitas">
+          <button class="minus">-</button>
+          <span class="jumlah">1</span>
+          <button class="plus">+</button>
+        </div>
+        <button class="bayar" onclick="window.location.href='pembayaran.html'">Bayar</button>
+      </div>
+    </div>
+
+    <!-- Duplikat produk -->
+    <div class="produk">
+      <img src="Assets/baju.png" alt="Baju" />
+      <div class="info">
+        <h2>Baju Dengan Bahan Premium</h2>
+        <div class="size-options">
+          <span>Size:</span>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">M</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn">XS</button>
+          <button class="size-btn">XXL</button>
+        </div>
+        <p class="harga">Harga: Rp100.000</p>
+        <div class="kuantitas">
+          <button class="minus">-</button>
+          <span class="jumlah">1</span>
+          <button class="plus">+</button>
+        </div>
+        <button class="bayar" onclick="window.location.href='pembayaran.html'">Bayar</button>
+
+      </div>
+    </div>
+  </main>
+
+<script>
+  // Kuantitas + -
+  document.querySelectorAll('.produk').forEach(produk => {
+    const minusBtn = produk.querySelector('.minus');
+    const plusBtn = produk.querySelector('.plus');
+    const jumlahEl = produk.querySelector('.jumlah');
+
+    let jumlah = parseInt(jumlahEl.textContent);
+
+    plusBtn.addEventListener('click', () => {
+      jumlah++;
+      jumlahEl.textContent = jumlah;
+    });
+
+    minusBtn.addEventListener('click', () => {
+      if (jumlah > 1) {
+        jumlah--;
+        jumlahEl.textContent = jumlah;
+      }
+    });
+  });
+
+  // Size selection
+  document.querySelectorAll('.size-options').forEach(group => {
+    const buttons = group.querySelectorAll('.size-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b4b4b;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.search-profile {
+  display: flex;
+  align-items: center;
+}
+
+.search-profile input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+.judul-bayar {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #333;
+  cursor: default;
+  margin-bottom: 20px;
+}
+
+.produk-container {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.produk-img {
+  width: 200px;
+  height: auto;
+}
+
+.produk-info {
+  flex: 1;
+  min-width: 180px;
+}
+
+.produk-detail {
+  min-width: 200px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.sizes button {
+  margin: 2px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  background: white;
+  cursor: pointer;
+}
+
+.harga {
+  margin: 10px 0;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-control button {
+  padding: 2px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pembayaran-box {
+  background-color: #999;
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.metode-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.opsi-pembayaran label {
+  display: inline-block;
+  margin-right: 15px;
+  color: white;
+}
+
+.btn-bayar {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-bayar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .produk-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produk-detail {
+    width: 100%;
+  }
+
+  .pembayaran-box {
+    width: 100%;
+  }
+}
